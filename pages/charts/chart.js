@@ -30,13 +30,15 @@ function getRepos() {
     alert("Please enter a username");
   } else {
     event.preventDefault();
-    let token = "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";
+    // let token = "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";
 
-    fetch(`https://api.github.com/users/${input.value}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
+    fetch(`https://api.github.com/users/${input.value}`
+    // , {
+      // headers: {
+      //   Authorization: `Bearer ${token}`,
+      // },
+    // }
+    )
       .then((response) => response.json())
       .then((response) => {
         sidebar.innerHTML = `
@@ -50,11 +52,13 @@ function getRepos() {
         changeColor();
       })
    
-    fetch(`https://api.github.com/users/${input.value}/repos`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
+    fetch(`https://api.github.com/users/${input.value}/repos`
+    // , {
+    //   headers: {
+    //     Authorization: `Bearer ${token}`,
+    //   },
+    // }
+    )
       .then((response) => response.json())
       .then((repositories) => {
         repo.innerHTML = "";
