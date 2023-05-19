@@ -61,7 +61,7 @@ btn.onclick = function () {
                     if (dataOne.length >= dataTwo.length) {
                       container.innerHTML += `
                         <div class="row">
-                          <div class="container1 col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xs-offset-0">
+                          <div class="container1 d-flex flex-column col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xs-offset-0">
                             
                               <div class="winner">
                                 <h1>winner</h1>
@@ -80,7 +80,7 @@ btn.onclick = function () {
                     } else if (dataTwo.length >= dataOne.length) {
                       container.innerHTML += `
                         <div class="row">
-                          <div class="container2 col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xs-offset-0">
+                          <div class="container2 d-flex flex-column col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xs-offset-0">
                             
                               <div class="winner">
                                 <h1>winner</h1>
